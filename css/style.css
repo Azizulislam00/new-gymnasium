@@ -1,0 +1,1380 @@
+/* 
+1. common css
+2. common heading css
+3. common overlay css
+4. navbar css
+5. banner css
+6. about css
+7. our gallery
+8. our team
+9. testimonial css
+10. funcfact css
+11. our classes
+12. brand css
+13. footer css
+*/
+
+
+/* ================Table of content============== */
+:root {
+    --hf: 'Oswald',
+        sans-serif;
+    --pf: 'Open Sans',
+        sans-serif;
+    --cl1: #e23e38;
+    --cl2: #0d0d0d;
+    --cl3: #313131;
+    --cl4: #353535;
+    --pc: #777777;
+    --cl60: rgba(0, 0, 0, 0.6);
+    --cl80: rgba(0, 0, 0, 0.8);
+    --clo: rgba(226, 62, 56, 0.5);
+    --clbx: #f1f1f1;
+    --clb: #dddddd;
+    --cllo: #1da0f2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+/* ================common css end============== */
+header h2 {
+    font-family: var(--hf);
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cl4);
+}
+
+header img {
+    margin-top: -5px;
+}
+
+/* ================common header css end============== */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clo);
+    transition: all linear 0.4s;
+}
+
+/* ================common overlay css end============== */
+.navbar {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.6);
+    z-index: 99999;
+}
+
+.navbar-brand {
+    background: #323232;
+    padding: 10px 15px;
+    transform: skewX(-35deg);
+    position: absolute;
+    top: -13px;
+}
+
+.navbar-brand img {
+    transform: skewX(35deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: var(--hf);
+    color: var(--clbx);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding: 0;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link {
+    color: var(--cl4);
+}
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -11;
+    transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link::after {
+    height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link.active::before {
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link::after {
+    height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link::before {
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link::before {
+    width: 100%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ================navbar css end============== */
+
+#banner .banner-slider .slider-item {
+    padding-top: 255px;
+    padding-bottom: 116px;
+    position: relative;
+    z-index: 1;
+}
+
+#banner .banner-slider .slider-item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--cl60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#banner .banner-slider .bg1 {
+    background: url(../images/banner1.png) no-repeat center / cover;
+}
+
+#banner .slider-item .banner-text h2 {
+    font-family: var(--hf);
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+}
+
+#banner .bg1 .banner-text h2::after {
+    content: '';
+    width: 165px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 17px;
+    left: -6px;
+}
+
+#banner .bg1 .banner-text h2::before {
+    content: '';
+    width: 165px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 17px;
+    right: -6px;
+}
+
+#banner .slider-item .banner-text h1 {
+    font-family: var(--hf);
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl1);
+    position: relative;
+}
+
+#banner .bg1 .banner-text h1::after {
+    content: '';
+    width: 3px;
+    height: 193px;
+    background: var(--cl1);
+    position: absolute;
+    top: -24px;
+    left: -6px;
+}
+
+#banner .bg1 .banner-text h1::before {
+    content: '';
+    width: 3px;
+    height: 193px;
+    background: var(--cl1);
+    position: absolute;
+    top: -24px;
+    right: -6px;
+}
+
+#banner .slider-item .banner-text p {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 5px;
+    color: #fff;
+    padding-bottom: 10px;
+    position: relative;
+    padding: 10px;
+}
+
+#banner .bg1 .banner-text p::after {
+    content: '';
+    width: 75px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 89px;
+    left: -6px;
+}
+
+#banner .bg1 .banner-text p::before {
+    content: '';
+    width: 75px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 89px;
+    right: -6px;
+}
+
+#banner .slider-item .banner-text .btn {
+    font-family: var(--hf);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0;
+    padding: 0 15px;
+    border-radius: 0;
+    line-height: 34px;
+    transition: all linear 0.4s;
+}
+
+#banner .slider-item .banner-text a:first-of-type {
+    margin-right: 25px;
+    background: var(--cl1);
+    border: 1px solid var(--cl1);
+}
+
+#banner .slider-item .banner-text a:first-of-type:hover {
+    background: none;
+    border: 1px solid #fff;
+}
+
+#banner .slider-item .banner-text a:last-of-type:hover {
+    background: var(--cl1);
+    border: 1px solid var(--cl1);
+}
+
+#banner .banner-slider .bg2 {
+    background: url(../images/banner2.png) no-repeat center / cover;
+}
+
+#banner .banner-slider .bg3 {
+    background: url(../images/banner3.png) no-repeat center / cover;
+}
+
+#banner .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+}
+
+#banner .slick-dots li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#banner .slick-dots li.slick-active {
+    background: var(--cl1);
+    border: 1px solid var(--cl1);
+}
+
+#banner .slick-dots li:last-of-type {
+    margin-right: 0;
+}
+
+#banner .slick-dots li button {
+    font-size: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* ================banner css end============== */
+
+#about-us .about-bg .images {
+    position: relative;
+}
+
+#about-us .about-bg .images .overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--cl60);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#about-us .about-bg .images .overlay .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--cl1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    z-index: 9999;
+}
+
+#about-us .about-bg .images .overlay i {
+    font-size: 20px;
+    color: var(--cl2);
+}
+
+#about-us .about-bg .about-text p {
+    font-family: var(--pf);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--pc);
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+#about-us .vbox-close {
+    color: rgb(226, 62, 56);
+    background: white;
+}
+
+/* ================about us css end============== */
+
+#our-gallery .gallery-bg {
+    background: url(../images/gallary-bg.png) no-repeat center / cover;
+    padding: 30px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+#our-gallery .gallery-bg::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--cl80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#our-gallery .gallery-bg .gallery-item {
+    position: relative;
+}
+
+#our-gallery .gallery-bg .gallery-item .overlay {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+#our-gallery .gallery-bg .gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+#our-gallery .gallery-bg .gallery-item .overlay .gallery-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#our-gallery .gallery-bg .gallery-item .overlay .gallery-icon i {
+    color: #FFF;
+    font-size: 24px;
+}
+
+/* ================our gallery css end============== */
+#our-team .team-content .team-item {
+    margin: 0 15px;
+    padding-top: 63px;
+    transition: all linear 0.4s;
+}
+
+#our-team .team-content .team-item:hover {
+    transform: translateY(-40px);
+}
+
+#our-team .team-content .team-item .card {
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: all linear 0.4s;
+}
+
+#our-team .team-content .team-item:hover .card {
+    border: 1px solid var(--clb);
+}
+
+#our-team .team-content .team-item .card .card-img .card-img-top {
+    border-radius: 0;
+}
+
+#our-team .team-content .team-item .card-img {
+    position: relative;
+}
+
+#our-team .team-content .team-item .card-img .overlay {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+#our-team .team-content .team-item:hover .card-img .overlay {
+    opacity: 1;
+}
+
+#our-team .team-content .team-item .card-img .overlay ul {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+#our-team .team-content .team-item .card-img .overlay li {
+    margin-bottom: 10px;
+}
+
+#our-team .team-content .team-item .card-img .overlay li:last-of-type {
+    margin-bottom: 0;
+}
+
+#our-team .team-content .team-item .card-img .overlay li i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    transition: all linear 0.4s;
+}
+
+#our-team .team-content .team-item .card-img .overlay li:hover i {
+    color: var(--cllo);
+    background: #fff;
+}
+
+#our-team .team-content .team-item h5.card-title {
+    font-size: 14px;
+    font-family: var(--hf);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cl3);
+}
+
+#our-team .team-content .team-item h6.card-title {
+    font-size: 14px;
+    font-family: var(--hf);
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--pc);
+    margin-top: -5px;
+}
+
+#our-team .team-content .team-item .card-text {
+    font-size: 13px;
+    font-family: var(--pf);
+    font-weight: 400;
+    color: var(--pc);
+    margin-top: -5px;
+    padding-top: 5px;
+    visibility: hidden;
+    transition: all linear 0.7s;
+    opacity: 0;
+}
+
+#our-team .team-content .team-item:hover .card-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ================our team css end============== */
+
+#testimonial .testimonial-bg {
+    padding: 30px 0;
+    background: url(../images/testimonial-bg.png) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px !important;
+}
+
+#testimonial .testimonial-bg::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--cl80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#testimonial .testimonial-bg .test-item {
+    margin-left: 20px;
+}
+
+#testimonial .testimonial-bg .test-item .item-text h2 {
+    font-family: var(--hf);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+#testimonial .testimonial-bg .test-item .item-text h3 {
+    font-family: var(--hf);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: -5px;
+}
+
+#testimonial .testimonial-bg .test-item .item-text ul li {
+    display: inline-block;
+    color: var(--cl1);
+    margin-top: -5px;
+}
+
+#testimonial .testimonial-bg .test-item p {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+#testimonial .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+#testimonial .slick-dots li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+#testimonial .slick-dots li.slick-active {
+    background: var(--cl1);
+    border: 1px solid var(--cl1);
+}
+
+#testimonial .slick-dots li:last-of-type {
+    margin-right: 0;
+}
+
+#testimonial .slick-dots li button {
+    font-size: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* ================testimonial end css end============== */
+#membership .price-item {
+    margin-top: 25px;
+}
+
+#membership .price-item .price-head h2 {
+    font-size: 16px;
+    font-family: var(--hf);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--cl4);
+    background: var(--clb);
+    line-height: 55px;
+    margin-bottom: 0;
+    transition: all linear 0.4s;
+}
+
+#membership .price-item:hover .price-head h2 {
+    background: var(--cl1);
+    color: #fff;
+}
+
+#membership .price-item .price-month .images {
+    position: relative;
+}
+
+#membership .price-item .price-month .images .overlay {
+    background: var(--cl80);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#membership .price-item .price-month .images .overlay h3 {
+    font-family: var(--hf);
+    font-size: 29px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#membership .price-item .price-month .images .overlay h3 span {
+    font-family: var(--hf);
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#membership .price-item .member-feature ul {
+    background: var(--clbx);
+
+}
+
+#membership .price-item .member-feature ul li {
+    font-family: var(--pf);
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+#membership .price-item .member-feature ul li:first-child {
+    padding-top: 30px;
+}
+
+#membership .price-item .price-footer h5 {
+    font-size: 16px;
+    font-family: var(--hf);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cl4);
+    background: var(--clb);
+    line-height: 34px;
+    margin-bottom: 0;
+    transition: all linear 0.4s;
+}
+
+#membership .price-item:hover .price-footer h5 {
+    background: var(--cl1);
+    color: #fff;
+}
+
+/* ================membership css end============== */
+#funcfact {
+    background: url(../images/counter-bg.png) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#funcfact::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#funcfact .funcfact-item h2 {
+    font-family: var(--hf);
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 44px;
+    margin: 0;
+}
+
+#funcfact .funcfact-item h3 {
+    font-family: var(--hf);
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 44px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+/* ================funfact css end============== */
+#classes .class-head .nav-tabs {
+    border-bottom: none;
+    margin-top: 20px;
+}
+
+#classes .class-head .nav-tabs .nav-item {
+    width: 16.668%;
+}
+
+#classes .class-head .nav-tabs .nav-item .nav-link {
+    width: 100%;
+    color: var(--cl4);
+    font-family: var(--hf);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    padding: 0;
+    background: var(--clbx);
+    line-height: 51px;
+
+}
+
+#classes .class-head .nav-tabs .nav-item .nav-link:hover {
+    background: var(--cl1);
+    color: #fff;
+}
+
+#classes .class-head .nav-tabs .nav-item .nav-link.active {
+    background: var(--cl1);
+    color: #fff;
+}
+
+#classes .class-list ul {
+    display: flex;
+    margin-top: 30px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#classes .class-list ul li {
+    text-align: center;
+    background: var(--clbx);
+    width: 19.5%;
+    padding: 45px 0;
+    margin-bottom: 5px;
+    transition: all linear 0.4s;
+}
+
+#classes .class-list ul li:hover {
+    background: var(--cl1);
+    transform: scale(1.1);
+}
+
+#classes .class-list ul li:nth-child(5n) {
+    margin-right: 0px;
+}
+
+#classes .class-list ul li h3 {
+    font-family: var(--pf);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cl4);
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+#classes .class-list ul li:hover h3,
+#classes .class-list ul li:hover i,
+#classes .class-list ul li:hover h4 {
+    color: #fff;
+}
+
+#classes .class-list ul li i {
+    font-size: 50px;
+    color: var(--cl4);
+}
+
+#classes .class-list ul li h4 {
+    font-family: var(--pf);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cl4);
+    text-transform: capitalize;
+    margin-bottom: 0;
+    margin-top: -12px;
+}
+
+/* ================our class end============== */
+.slick-slide img {
+    width: 96%;
+}
+
+#brand .prev-btn {
+    position: absolute;
+    top: 50%;
+    left: -3%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+#brand .next-btn {
+    position: absolute;
+    top: 50%;
+    right: -3%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+#brand .prev-btn:hover,
+#brand .next-btn:hover {
+    color: var(--cl1);
+}
+
+#brand .slick-center {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.30);
+}
+
+/* ================brand css end============== */
+#footer {
+    background: url(../images/footer-bg.png) no-repeat center / cover;
+    position: relative;
+}
+
+#footer::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+#footer::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+}
+
+#footer .footer-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 7, 7, 0.85);
+    padding-top: 30px;
+}
+
+#footer .footer-overlay .footer-logo {
+    margin-bottom: 60px;
+}
+
+#footer .footer-overlay .footer-item {
+    margin-bottom: 30px;
+}
+
+#footer .footer-overlay .footer-item ul {
+    margin-top: 15px;
+}
+
+#footer .footer-overlay .footer-item h3 {
+    font-family: var(--hf);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#footer .footer-overlay .footer-item ul li {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+#footer .footer-overlay .footer-item ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+#footer .footer-overlay .footer-item .day {
+    margin-right: 35px;
+    width: 70px;
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block
+}
+
+#footer .footer-overlay .footer-item .closed {
+    text-transform: capitalize;
+
+
+}
+
+#footer .footer-overlay .footer-item .twettir li {
+    position: relative;
+    padding-left: 28px;
+    margin: 0;
+}
+
+#footer .footer-overlay .footer-item .twettir li:last-of-type {
+    margin-top: 20px;
+}
+
+#footer .footer-overlay .footer-item .twettir ul li a {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#footer .footer-overlay .footer-item .twettir li a .date {
+    display: block;
+    font-weight: 700;
+}
+
+#footer .footer-overlay .footer-item .twettir li .footer-icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+#footer .footer-overlay .footer-item .twettir li .footer-icon i {
+    color: #1da0f2;
+    font-size: 20px;
+}
+
+#footer .footer-overlay .footer-item .flickr {
+    margin-top: 22px;
+}
+
+#footer .footer-overlay .footer-item ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .footer-overlay .footer-item .flickr ul li {
+    margin: 0;
+    padding: 0;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+#footer .footer-overlay .footer-item .flickr li:nth-child(9),
+#footer .footer-overlay .footer-item .flickr li:nth-child(10),
+#footer .footer-overlay .footer-item .flickr li:nth-child(11),
+#foot .footer-overlay .footer-item .flickr li:nth-child(12) {
+    margin-bottom: 0;
+}
+
+#footer .footer-overlay .footer-item .contact li {
+    position: relative;
+    padding-left: 23px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+#footer .footer-overlay .footer-item .contact li i {
+    color: var(--cl1);
+    font-size: 15px;
+}
+
+#footer .footer-overlay .footer-item .contact li a {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+
+}
+
+#footer .footer-overlay .footer-item .contact li:last-of-type {
+    text-transform: lowercase;
+    margin-bottom: 0;
+}
+
+#footer .footer-overlay .footer-item h4 {
+    font-family: var(--hf);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-social i {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #fff;
+    transition: all linear 0.4s;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-social {
+    margin-right: 5px;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-social:last-child {
+    margin-right: 0;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-social i:hover {
+    background: var(--cl1);
+    border-color: var(--cl1);
+}
+
+#footer .footer-overlay .footer-copy h3 {
+    font-family: var(--pf);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+}
+
+#footer .footer-overlay .footer-copy h3 a {
+    color: var(--cl1);
+    text-transform: uppercase;
+}
+
+/* ================footer css end============== */
+/* ================color plate start============== */
+.color-pointer {
+    width: 200px;
+    height: 50px;
+    background: #30336b;
+    position: fixed;
+    top: 100px;
+    right: -200px;
+    transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+    z-index: 9999;
+}
+
+.color-pointer-pos {
+    right: 0;
+}
+
+.color-pointer .color-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--cl1);
+}
+
+.color-pointer .color-icon i {
+    color: #fff;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-pointer ul {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color-pointer ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.color-pointer ul li.default {
+    background: var(--cl1);
+}
+
+.color-pointer ul li.color1 {
+    background: #00b894;
+}
+
+.color-pointer ul li.color2 {
+    background: #fdcb6e;
+}
+
+.color-pointer ul li.color3 {
+    background: #0984e3;
+}
+
+.color-pointer ul li.color4 {
+    background: #e84393;
+}
+
+/* color1 css start */
+.color1 .navbar-light .navbar-nav .nav-link::before,
+.color1 #banner .bg1 .banner-text h2::before,
+.color1 #banner .bg1 .banner-text h2::after,
+.color1 #banner .bg1 .banner-text h1::before,
+.color1 #banner .bg1 .banner-text h1::after,
+.color1 #banner .bg1 .banner-text p::before,
+.color1 #banner .bg1 .banner-text p::after,
+.color1 #about-us .about-bg .images .overlay .icon,
+.color1 #membership .price-item:hover .price-head h2,
+.color1 #membership .price-item:hover .price-footer h5,
+.color1 #classes .class-head .nav-tabs .nav-item .nav-link.active,
+.color1 #classes .class-head .nav-tabs .nav-item .nav-link:hover,
+.color1 #classes .class-list ul li:hover,
+.color1 .color-pointer .color-icon,
+.color1 .back-to-top {
+    background: #00b894;
+}
+
+.color1 #banner .slider-item .banner-text h1,
+.color1 #testimonial .testimonial-bg .test-item .item-text ul li,
+.color1 #brand .prev-btn:hover,
+.color1 #brand .next-btn:hover,
+.color1 #footer .footer-overlay .footer-item .contact li i,
+.color1 #footer .footer-overlay .footer-copy h3 a {
+    color: #00b894;
+}
+
+.color1 #banner .slider-item .banner-text a:first-of-type,
+.color1 #banner .slider-item .banner-text a:last-of-type:hover,
+.color1 #banner .slick-dots li.slick-active,
+.color1 #footer .footer-overlay .footer-item .contact .footer-social i:hover {
+    background: #00b894;
+    border-color: #00b894;
+}
+
+.color1 .overlay {
+    background: rgba(0, 184, 147, 0.5);
+}
+
+/* color1 css end */
+/* color2 css start */
+.color2 .navbar-light .navbar-nav .nav-link::before,
+.color2 #banner .bg1 .banner-text h2::before,
+.color2 #banner .bg1 .banner-text h2::after,
+.color2 #banner .bg1 .banner-text h1::before,
+.color2 #banner .bg1 .banner-text h1::after,
+.color2 #banner .bg1 .banner-text p::before,
+.color2 #banner .bg1 .banner-text p::after,
+.color2 #about-us .about-bg .images .overlay .icon,
+.color2 #membership .price-item:hover .price-head h2,
+.color2 #membership .price-item:hover .price-footer h5,
+.color2 #classes .class-head .nav-tabs .nav-item .nav-link.active,
+.color2 #classes .class-head .nav-tabs .nav-item .nav-link:hover,
+.color2 #classes .class-list ul li:hover,
+.color2 .color-pointer .color-icon,
+.color2 .back-to-top {
+    background: #fdcb6e;
+}
+
+.color2 #banner .slider-item .banner-text h1,
+.color2 #testimonial .testimonial-bg .test-item .item-text ul li,
+.color2 #brand .prev-btn:hover,
+.color2 #brand .next-btn:hover,
+.color2 #footer .footer-overlay .footer-item .contact li i,
+.color2 #footer .footer-overlay .footer-copy h3 a {
+    color: #fdcb6e;
+}
+
+.color2 #banner .slider-item .banner-text a:first-of-type,
+.color2 #banner .slider-item .banner-text a:last-of-type:hover,
+.color2 #banner .slick-dots li.slick-active,
+.color2 #footer .footer-overlay .footer-item .contact .footer-social i:hover {
+    background: #fdcb6e;
+    border-color: #fdcb6e;
+}
+
+.color2 .overlay {
+    background: rgba(253, 203, 110, 0.5);
+}
+
+/* color2 css end */
+/* color3 css start */
+.color3 .navbar-light .navbar-nav .nav-link::before,
+.color3 #banner .bg1 .banner-text h2::before,
+.color3 #banner .bg1 .banner-text h2::after,
+.color3 #banner .bg1 .banner-text h1::before,
+.color3 #banner .bg1 .banner-text h1::after,
+.color3 #banner .bg1 .banner-text p::before,
+.color3 #banner .bg1 .banner-text p::after,
+.color3 #about-us .about-bg .images .overlay .icon,
+.color3 #membership .price-item:hover .price-head h2,
+.color3 #membership .price-item:hover .price-footer h5,
+.color3 #classes .class-head .nav-tabs .nav-item .nav-link.active,
+.color3 #classes .class-head .nav-tabs .nav-item .nav-link:hover,
+.color3 #classes .class-list ul li:hover,
+.color3 .color-pointer .color-icon,
+.color3 .back-to-top {
+    background: #0984e3;
+}
+
+.color3 #banner .slider-item .banner-text h1,
+.color3 #testimonial .testimonial-bg .test-item .item-text ul li,
+.color3 #brand .prev-btn:hover,
+.color3 #brand .next-btn:hover,
+.color3 #footer .footer-overlay .footer-item .contact li i,
+.color3 #footer .footer-overlay .footer-copy h3 a {
+    color: #0984e3;
+}
+
+.color3 #banner .slider-item .banner-text a:first-of-type,
+.color3 #banner .slider-item .banner-text a:last-of-type:hover,
+.color3 #banner .slick-dots li.slick-active,
+.color3 #footer .footer-overlay .footer-item .contact .footer-social i:hover {
+    background: #0984e3;
+    border-color: #0984e3;
+}
+
+.color3 .overlay {
+    background: rgba(9, 133, 227, 0.5);
+}
+
+/* color3 css end */
+/* color4 css start */
+.color4 .navbar-light .navbar-nav .nav-link::before,
+.color4 #banner .bg1 .banner-text h2::before,
+.color4 #banner .bg1 .banner-text h2::after,
+.color4 #banner .bg1 .banner-text h1::before,
+.color4 #banner .bg1 .banner-text h1::after,
+.color4 #banner .bg1 .banner-text p::before,
+.color4 #banner .bg1 .banner-text p::after,
+.color4 #about-us .about-bg .images .overlay .icon,
+.color4 #membership .price-item:hover .price-head h2,
+.color4 #membership .price-item:hover .price-footer h5,
+.color4 #classes .class-head .nav-tabs .nav-item .nav-link.active,
+.color4 #classes .class-head .nav-tabs .nav-item .nav-link:hover,
+.color4 #classes .class-list ul li:hover,
+.color4 .color-pointer .color-icon,
+.color4 .back-to-top {
+    background: #e84393;
+}
+
+.color4 #banner .slider-item .banner-text h1,
+.color4 #testimonial .testimonial-bg .test-item .item-text ul li,
+.color4 #brand .prev-btn:hover,
+.color4 #brand .next-btn:hover,
+.color4 #footer .footer-overlay .footer-item .contact li i,
+.color4 #footer .footer-overlay .footer-copy h3 a {
+    color: #e84393;
+}
+
+.color4 #banner .slider-item .banner-text a:first-of-type,
+.color4 #banner .slider-item .banner-text a:last-of-type:hover,
+.color4 #banner .slick-dots li.slick-active,
+.color4 #footer .footer-overlay .footer-item .contact .footer-social i:hover {
+    background: #e84393;
+    border-color: #e84393;
+}
+
+.color4 .overlay {
+    background: rgba(232, 67, 147, 0.5);
+}
+
+/* color4 css end */
+/* ================color plate end============== */
+/* ==back to top button start== */
+.back-to-top {
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cl1);
+    border-radius: 50%;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-top i {
+    font-size: 20px;
+    color: var(--fc);
+
+}
+
+/* ==back to top button end== */

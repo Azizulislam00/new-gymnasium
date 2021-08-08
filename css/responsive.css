@@ -1,0 +1,184 @@
+/* extra small devise start */
+@media (min-width:320px) and (max-width:575px) {
+
+    /* nav section start */
+    .navbar-brand {
+        position: static;
+        padding: 0 16px;
+        transform: skewX(0);
+    }
+
+    .navbar-brand img {
+        transform: skewX(0);
+    }
+
+    .navbar-light .navbar-toggler {
+        border-color: #fff;
+    }
+
+    .navbar .navbar-toggler span {
+        color: #fff;
+    }
+
+    #banner .banner-slider .slider-item {
+        padding-top: 150px;
+        padding-bottom: 68px;
+    }
+
+    .navbar-nav {
+        background: #fff;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+    }
+
+    #banner .bg1 .banner-text h2::before,
+    #banner .bg1 .banner-text h2::after,
+    #banner .bg1 .banner-text p::before,
+    #banner .bg1 .banner-text p::after,
+    #banner .bg1 .banner-text h1::before,
+    #banner .bg1 .banner-text h1::after {
+        display: none;
+    }
+
+    /* nav section end */
+    /* about section start */
+    #about-us .about-bg {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #about-us .about-bg .images {
+        margin-top: 20px;
+    }
+
+    /* about section end */
+    /* our gallery section start */
+    #our-gallery .gallery-bg {
+        margin-top: 20px;
+        padding-bottom: 0;
+    }
+
+    #our-gallery .gallery-bg .gallery-item {
+        margin-bottom: 30px;
+    }
+
+    /* our gallery section end */
+
+
+    /* our team section start */
+    #our-team {
+        margin-top: 20px !important;
+        margin-bottom: 0px !important;
+    }
+
+    /* our team section end */
+
+    /*testimonial  start */
+    #testimonial .slick-slide img {
+        width: 40%;
+    }
+    /*testimonial  end */
+    /* membership section start */
+    #membership {
+        margin-top: 20px !important;
+        margin-bottom: 0px !important;
+    }
+
+    #membership .price-item {
+        margin-bottom: 10px;
+    }
+
+    /* membership section end */
+
+    /* funcfact section start */
+    #funcfact {
+        margin-top: 20px !important;
+        margin-bottom: 0px !important;
+    }
+
+    /* funcfact section end */
+
+    /* classes section start */
+    #classes {
+        margin-top: 20px !important;
+        margin-bottom: 15px !important;
+    }
+
+    #classes .class-head .nav-tabs {
+        margin-top: 10px;
+    }
+
+    #classes .class-head .nav-tabs .nav-item {
+        margin-right: 1%;
+        margin-top: 5px;
+        width: 15.8%;
+    }
+
+    #classes .class-head .nav-tabs .nav-item:last-child {
+        margin-right: 0;
+    }
+
+    #classes .class-head .nav-tabs .nav-item .nav-link {
+        font-size: 13px;
+        font-weight: 300;
+        padding: 0px 0px;
+        line-height: 30px;
+    }
+
+    #classes .class-list {
+        margin-top: -15px;
+    }
+#classes .class-list ul li {
+    padding: 30px 0;
+
+}
+    #classes .class-list ul li h3 {
+        font-size: 13px;
+    }
+
+    #classes .class-list ul li i {
+        font-size: 30px;
+    }
+
+    #classes .class-list ul li h4 {
+        font-size: 13px;
+    }
+
+    /* classes section end */
+    /* brand section start */
+    #brand {
+        margin-bottom: 35px !important;
+    }
+
+    #brand .brand-item img {
+        width: 95%;
+    }
+
+    /* brand section end */
+    /* footer section start */
+    #footer .footer-overlay .footer-item .flickr li {
+        width: 79px;
+        margin: 0;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    /* footer section end */
+
+}
+
+/* extra small devise end */
+/*medium  devise start */
+@media (min-width:576px) and (max-width:768px) {
+#footer .footer-overlay .footer-item .flickr ul li {
+    margin: 0;
+    padding: 0;
+    margin-right: 3%;
+    margin-bottom: 2%;
+}
+        /* footer section end */
+}
+
+/*medium  devise end */
